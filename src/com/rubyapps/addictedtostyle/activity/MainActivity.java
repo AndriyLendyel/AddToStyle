@@ -61,15 +61,6 @@ public class MainActivity extends Activity {
 	public void onResume() {
 		super.onResume();
 		Appodeal.onResume(this, Appodeal.BANNER);
-
-		Intent intent = getIntent();
-		String url = intent.getStringExtra("url");
-		if (url != null && !url.isEmpty()) {
-			Intent intentWeb = new Intent(MainActivity.this,
-					WebViewActivity.class);
-			intentWeb.putExtra("url", url);
-			startActivity(intentWeb);
-		}
 	}
 
 	@Override
